@@ -1,0 +1,49 @@
+body {
+    background-color: #444444;
+}
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    font-family: Hack, monospace;
+}
+
+.SearchEngineWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.SearchEngineButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 1px;
+    padding: 0.5em;
+    border: none;
+    border-radius: 8px 8px 0px 0px;
+    background-color: #1E1E1E;
+    color: white;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.SearchEngineName {
+    margin-right: 1em;
+}
+
+.SearchEngineLogo {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 1em;
+    transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.SearchEngineButton:hover .SearchEngineLogo {
+    filter: invert(100%) sepia(0%) saturate(7480%) hue-rotate(174deg) brightness(105%) contrast(100%) drop-shadow(0 0 0.2rem #ffffff);
+}
+
