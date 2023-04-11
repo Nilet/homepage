@@ -1,6 +1,7 @@
 import yandexLogo from './assets/yandex.svg'
 import bingLogo from './assets/bing.svg'
 import googleLogo from './assets/google.svg'
+import cameraSvg from './assets/camera.svg'
 import { useState } from 'react'
 import SearchEngineSelector from './components/SearchEngineSelector'
 import './App.css'
@@ -30,7 +31,7 @@ function App() {
                     break;
                 case "Google":
                     url = googleUrl + inputValue
-                        break;
+                    break;
                 default:
                     break;
             }
@@ -61,6 +62,7 @@ function App() {
                 />
             </div>
             <input type="search" placeholder="Search..." autoFocus id="SearchField" onKeyDown={submitSearch} />
+            <a id="ReverseImageSearch"> <img src={cameraSvg}></img></a>
         </div>
     );
 }

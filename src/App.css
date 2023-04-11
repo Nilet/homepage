@@ -74,3 +74,14 @@ body {
     color: #2f2f2f;
     font-size: 1.8rem;
 }
+
+
+#ReverseImageSearch {
+    display: flex;
+    justify-content: right !important;
+}
+
+#ReverseImageSearch img{
+    width: 2.7em;
+    color: #fff;
+}
