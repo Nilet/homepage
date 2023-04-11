@@ -12,24 +12,19 @@ const googleUrl = "https://www.google.com/search?q=";
 function App() {
     const [selectedEngine, setSelectedEngine] = useState("Google");
 
-    const handleEngineSelect = (engineName: string) => {
-        setSelectedEngine(engineName);
-        console.log(engineName);
-    };
-
     const submitSearch = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === "Enter") {
-            const inputValue = event.currentTarget.value;
+            const fieldContent = event.currentTarget.value;
             let url = "";
             switch (selectedEngine) {
                 case "Yandex":
-                    url = yandexUrl + inputValue
+                    url = yandexUrl + fieldContent
                     break;
                 case "Bing":
-                    url = bingUrl + inputValue
+                    url = bingUrl + fieldContent
                     break;
                 case "Google":
-                    url = googleUrl + inputValue
+                    url = googleUrl + fieldContent
                     break;
                 default:
                     break;
@@ -45,19 +40,19 @@ function App() {
                     logo={googleLogo}
                     name="Google"
                     selected={selectedEngine === "Google"}
-                    onSelect={handleEngineSelect}
+                    onSelect={setSelectedEngine}
                 />
                 <SearchEngineSelector
                     logo={yandexLogo}
                     name="Yandex"
                     selected={selectedEngine === "Yandex"}
-                    onSelect={handleEngineSelect}
+                    onSelect={setSelectedEngine}
                 />
                 <SearchEngineSelector
                     logo={bingLogo}
                     name="Bing"
                     selected={selectedEngine === "Bing"}
-                    onSelect={handleEngineSelect}
+                    onSelect={setSelectedEngine}
                 />
             </div>
             <input type="search" placeholder="Search..." autoFocus id="SearchField" onKeyDown={submitSearch} />
