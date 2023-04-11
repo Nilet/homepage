@@ -78,10 +78,12 @@ body {
 
 #ReverseImageSearch {
     display: flex;
-    justify-content: right !important;
+    float: right;
 }
 
-#ReverseImageSearch img{
+#ReverseImageSearch svg {
     width: 2.7em;
-    color: #fff;
+}
+#ReverseImageSearch svg path{
+    stroke: #fff;
 }
