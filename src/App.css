@@ -1,5 +1,7 @@
-body {
-    background-color: #444444;
+:root {
+    /* variables */
+    --button-background: #1E1E1E;
+    --page-background: #444444;
 }
 
 #root {
@@ -8,6 +10,10 @@ body {
     padding: 2rem;
     text-align: center;
     font-family: Hack, monospace;
+}
+
+body {
+    background-color: var(--page-background);
 }
 
 .SearchEngineWrapper {
@@ -24,7 +30,7 @@ body {
     padding: 0.5em;
     border: none;
     border-radius: 8px 8px 0px 0px;
-    background-color: #1E1E1E;
+    background-color: var(--button-background);
     color: white;
     width: 14.25em;
     height: 2.4em;
@@ -43,10 +49,6 @@ body {
     transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.SearchEngineButton:hover .SearchEngineLogo {
-    filter: invert(100%) sepia(0%) saturate(7480%) hue-rotate(174deg) brightness(105%) contrast(100%) drop-shadow(0 0 0.2rem #ffffff);
-}
-
 .SelectedSearchEngine {
     height: 2.90em;
     border-top: thick solid #ffffff;
@@ -56,6 +58,8 @@ body {
   outline: none;
 }
 
+/* make it glow */
+.SearchEngineButton:hover .SearchEngineLogo,
 .SelectedSearchEngine .SearchEngineLogo {
     filter: invert(100%) sepia(0%) saturate(7480%) hue-rotate(174deg) brightness(105%) contrast(100%) drop-shadow(0 0 0.2rem #ffffff);
 }
@@ -75,7 +79,6 @@ body {
     font-size: 1.8rem;
 }
 
-
 #ReverseImageSearch {
     display: flex;
     float: right;
@@ -86,4 +89,40 @@ body {
 }
 #ReverseImageSearch svg path{
     stroke: #fff;
+}
+
+.linksWrapper {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0.5em;
+    margin-top: 4em;
+    gap: 1em;
+    text-align: center;
+}
+
+.linkLogo {
+    width: 100%;
+    height: 2em;
+    transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.linkName {
+    font-size: 1.25em;
+    display: block;
+    width: 100%;
+    font-family: Hack, monospace;
+    margin-bottom: 2em;
+}
+
+
+.linkButton {
+    display: flex;
+    flex-wrap: wrap;
+    width: 7em;
+    height: 5em;
+    padding: 1em;
+    vertical-align: middle;
+    flex: 0 0 30%;
 }

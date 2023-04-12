@@ -7,13 +7,11 @@ function SearchEngineSelector(props: {
     return (
         <button
             className={`SearchEngineButton ${props.selected ? "SelectedSearchEngine" : ""}`}
-            onClick={() => props.onSelect(props.name)}
-        >
+            onClick={() => props.onSelect(props.name)} >
             <img
                 src={props.logo}
                 alt={`${props.name} logo`}
-                className="SearchEngineLogo"
-            />
+                className="SearchEngineLogo" />
             <span className="SearchEngineName">{props.name}</span>
         </button>
     );
