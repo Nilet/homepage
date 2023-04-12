@@ -5,6 +5,11 @@ import LinkButton from './components/LinkButton'
 import yandexLogo from './assets/yandex.svg'
 import googleLogo from './assets/google.svg'
 import githubLogo from './assets/linksLogos/github.svg'
+import lastfmLogo from './assets/linksLogos/lastfm.svg'
+import openaiLogo from './assets/linksLogos/openai.svg'
+import tutanotaLogo from './assets/linksLogos/tutanota.svg'
+import twitterLogo from './assets/linksLogos/twitter.svg'
+import youtubeLogo from './assets/linksLogos/youtube.svg'
 
 const yandexUrl = "https://yandex.com/search/?text=";
 const googleUrl = "https://www.google.com/search?q=";
@@ -54,30 +59,30 @@ function App() {
                 </svg>
             </a>
             <div className="linksWrapper">
-                <LinkButton 
+                <LinkButton
+                    logo={twitterLogo}
+                    name="Twitter"
+                    url="https://twitter.com/home" />
+                <LinkButton
+                    logo={youtubeLogo}
+                    name="YouTube"
+                    url="https://www.youtube.com/" />
+                <LinkButton
                     logo={githubLogo}
                     name="Github"
-                    url="https://github.com/nilet"/>
-                <LinkButton 
-                    logo={githubLogo}
-                    name="Github"
-                    url="https://github.com/nilet"/>
-                <LinkButton 
-                    logo={githubLogo}
-                    name="Github"
-                    url="https://github.com/nilet"/>
-                <LinkButton 
-                    logo={githubLogo}
-                    name="Github"
-                    url="https://github.com/nilet"/>
-                <LinkButton 
-                    logo={githubLogo}
-                    name="Github"
-                    url="https://github.com/nilet"/>
-                <LinkButton 
-                    logo={githubLogo}
-                    name="Github"
-                    url="https://github.com/nilet"/>
+                    url="https://github.com/nilet" />
+                <LinkButton
+                    logo={lastfmLogo}
+                    name="Last FM"
+                    url="https://www.last.fm/user/nntablzdeboa" />
+                <LinkButton
+                    logo={openaiLogo}
+                    name="ChatGPT"
+                    url="https://chat.openai.com/chat" />
+                <LinkButton
+                    logo={tutanotaLogo}
+                    name="Tutanota"
+                    url="https://mail.tutanota.com/mail/" />
             </div>
         </div>
     );
