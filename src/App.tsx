@@ -1,16 +1,14 @@
 import yandexLogo from './assets/yandex.svg'
-import bingLogo from './assets/bing.svg'
 import googleLogo from './assets/google.svg'
 import { useState } from 'react'
 import SearchEngineSelector from './components/SearchEngineSelector'
 import './App.css'
 
 const yandexUrl = "https://yandex.com/search/?text=";
-const bingUrl = "https://www.bing.com/search?q=";
 const googleUrl = "https://www.google.com/search?q=";
 
 function App() {
-    const [selectedEngine, setSelectedEngine] = useState("Google");
+    const [selectedEngine, setSelectedEngine] = useState("Yandex");
 
     const submitSearch = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === "Enter") {
@@ -19,9 +17,6 @@ function App() {
             switch (selectedEngine) {
                 case "Yandex":
                     url = yandexUrl + fieldContent
-                    break;
-                case "Bing":
-                    url = bingUrl + fieldContent
                     break;
                 case "Google":
                     url = googleUrl + fieldContent
@@ -37,21 +32,15 @@ function App() {
         <div className="App">
             <div className="SearchEngineWrapper">
                 <SearchEngineSelector
-                    logo={googleLogo}
-                    name="Google"
-                    selected={selectedEngine === "Google"}
-                    onSelect={setSelectedEngine}
-                />
-                <SearchEngineSelector
                     logo={yandexLogo}
                     name="Yandex"
                     selected={selectedEngine === "Yandex"}
                     onSelect={setSelectedEngine}
                 />
                 <SearchEngineSelector
-                    logo={bingLogo}
-                    name="Bing"
-                    selected={selectedEngine === "Bing"}
+                    logo={googleLogo}
+                    name="Google"
+                    selected={selectedEngine === "Google"}
                     onSelect={setSelectedEngine}
                 />
             </div>
