@@ -9,6 +9,7 @@ import youtubeLogo from '../assets/linksLogos/youtube.svg'
 import dndLogo from '../assets/linksLogos/dnd.svg'
 import chessLogo from '../assets/linksLogos/chess.svg'
 import xahLogo from '../assets/linksLogos/sum.svg'
+import whatsappLogo from '../assets/linksLogos/whatsapp.svg'
 
 function Links() {
     return( <div className="linksWrapper">
@@ -28,6 +29,10 @@ function Links() {
             logo={lastfmLogo}
             name="Last FM"
             url="https://www.last.fm/user/nntablzdeboa" />
+        <LinkButton
+            logo={whatsappLogo}
+            name="WhatsApp"
+            url="https://web.whatsapp.com/" />
         <LinkButton
             logo={openaiLogo}
             name="ChatGPT"
