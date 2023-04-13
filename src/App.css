@@ -6,8 +6,12 @@
     /* --button-background: #1E1E1E; */
     /* --page-background: #444444; */
     
-    --button-background: #FF7EA8;
-    --page-background: #FFC1D3;
+    /* --button-background: #FF7EA8; */
+    /* --page-background: #FFC1D3; */
+
+    --button-background: #D8323C;
+    --page-background: #0C0E0C;
+    --light-color: #EAEBEA;
 }
 
 #root {
@@ -15,7 +19,7 @@
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-    /* font-family: Hack, monospace; */
+    font-family: Hack, monospace;
 }
 
 body {
@@ -26,6 +30,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    flex-wrap: wrap;
 }
 
 .SearchEngineButton {
@@ -57,7 +62,7 @@ body {
 
 .SelectedSearchEngine {
     height: 2.90em;
-    border-top: thick solid #ffffff;
+    border-top: thick solid var(--light-color);
 }
 
 .SelectedSearchEngine:hover, .SelectedSearchEngine:focus {
@@ -68,15 +73,16 @@ body {
 .linkButton:hover .linkLogo,
 .SearchEngineButton:hover .SearchEngineLogo,
 .SelectedSearchEngine .SearchEngineLogo {
-    filter: invert(100%) sepia(0%) saturate(7480%) hue-rotate(174deg) brightness(105%) contrast(100%) drop-shadow(0 0 0.2rem #ffffff);
+    filter: invert(100%) sepia(0%) saturate(7480%) hue-rotate(174deg) brightness(105%) contrast(100%) drop-shadow(0 0 0.2rem var(--light-color));
 }
 
 #SearchField {
     outline: 0; 
     width: 100%;
-    background: #fff;
+    background: var(--light-color);
     margin-top: .1em;
     padding: 0 1.6rem;
+    padding-right: 2.5em;
     border-radius: 6px;
     z-index: 1;
     position: relative;
@@ -87,15 +93,21 @@ body {
 }
 
 #ReverseImageSearch {
-    display: flex;
-    float: right;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    width: 2.7em;
+    height: 2.7em;
+    z-index: 1;
+    background-image: url('./assets/camera.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 
-#ReverseImageSearch svg {
-    width: 2.7em;
-}
 #ReverseImageSearch svg path{
-    stroke: #fff;
+    stroke: var(--light-color);
 }
 
 .linksWrapper {
@@ -136,4 +148,15 @@ body {
     margin-bottom: 2em;
 }
 
+.lain {
+    width: 15em;
+    position:fixed;
+    bottom: 0;
+    right: 0;
+    white-space: nowrap;
+}
 
+.searchBarAndReverse {
+    position:relative;
+    width: 100%;
+}
