@@ -9,7 +9,7 @@
     /* --button-background: #FF7EA8; */
     /* --page-background: #FFC1D3; */
 
-    --button-background: #D8323C;
+    --button-background: #c58d8f;
     --page-background: #0C0E0C;
     --light-color: #EAEBEA;
 }
@@ -61,6 +61,7 @@ body {
 
 .SearchEngineName {
     margin-right: 1em;
+    color: #000;
 }
 
 .SearchEngineLogo {
@@ -116,10 +117,6 @@ body {
     cursor: pointer;
 }
 
-#ReverseImageSearch svg path{
-    stroke: var(--light-color);
-}
-
 .linksWrapper {
     box-sizing: border-box;
     display: flex;
@@ -145,7 +142,7 @@ body {
 }
 
 .linkButton span {
-    color: var(--light-color);
+    color: #000;
 }
 
 .linkLogo {
@@ -163,11 +160,11 @@ body {
 }
 
 .lain {
-    width: 15vw;
+    width: 20vw;
     position:fixed;
     bottom: 0;
     right: 0;
-    white-space: nowrap;
+    white-space: no-wrap;
 }
 
 .searchBarAndReverse {

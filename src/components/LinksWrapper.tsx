@@ -6,6 +6,9 @@ import openaiLogo from '../assets/linksLogos/openai.svg'
 import tutanotaLogo from '../assets/linksLogos/tutanota.svg'
 import twitterLogo from '../assets/linksLogos/twitter.svg'
 import youtubeLogo from '../assets/linksLogos/youtube.svg'
+import dndLogo from '../assets/linksLogos/dnd.svg'
+import chessLogo from '../assets/linksLogos/chess.svg'
+import xahLogo from '../assets/linksLogos/sum.svg'
 
 function Links() {
     return( <div className="linksWrapper">
@@ -33,6 +36,18 @@ function Links() {
             logo={tutanotaLogo}
             name="Tutanota"
             url="https://mail.tutanota.com/mail/" />
+        <LinkButton
+            logo={dndLogo}
+            name="D&D Beyond"
+            url="https://www.dndbeyond.com/" />
+        <LinkButton
+            logo={xahLogo}
+            name="Xah Lee"
+            url="http://xahlee.info/" />
+        <LinkButton
+            logo={chessLogo}
+            name="Chess"
+            url="https://www.chess.com/home" />
     </div >)
 }
 
