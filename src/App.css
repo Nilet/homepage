@@ -1,16 +1,6 @@
 :root {
-    /* variables */
-
-    /* color-schemes TBD */
-
-    /* --button-background: #1E1E1E; */
-    /* --page-background: #444444; */
-    
-    /* --button-background: #FF7EA8; */
-    /* --page-background: #FFC1D3; */
-
     --button-background: #c58d8f;
-    --page-background: #0C0E0C;
+    --page-background: #1E1E1E;
     --light-color: #EAEBEA;
 }
 
@@ -53,7 +43,7 @@ body {
 .SearchEngineButtonWrapper {
     display: flex;
     flex-direction: row;
-    wrap: no-wrap;
+    flex-wrap: no-wrap;
     width: 100%;
     align-items: end;
     position: relative;
