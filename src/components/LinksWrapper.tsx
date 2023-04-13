@@ -38,7 +38,7 @@ function Links() {
             url="https://mail.tutanota.com/mail/" />
         <LinkButton
             logo={dndLogo}
-            name="D&D Beyond"
+            name="D&D"
             url="https://www.dndbeyond.com/" />
         <LinkButton
             logo={xahLogo}
