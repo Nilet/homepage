@@ -111,11 +111,12 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0.5em;
     margin-top: 4em;
     gap: 1em;
     text-align: center;
+
 }
 
 .linkButton {
