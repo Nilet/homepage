@@ -35,18 +35,20 @@ function App() {
     return (
         <div className="App">
             <div className="SearchEngineWrapper">
-                <SearchEngineSelector
-                    logo={yandexLogo}
-                    name="Yandex"
-                    selected={selectedEngine === "Yandex"}
-                    onSelect={setSelectedEngine}
-                />
-                <SearchEngineSelector
-                    logo={googleLogo}
-                    name="Google"
-                    selected={selectedEngine === "Google"}
-                    onSelect={setSelectedEngine}
-                />
+                <div className="SearchEngineButtonWrapper">
+                    <SearchEngineSelector
+                        logo={yandexLogo}
+                        name="Yandex"
+                        selected={selectedEngine === "Yandex"}
+                        onSelect={setSelectedEngine}
+                    />
+                    <SearchEngineSelector
+                        logo={googleLogo}
+                        name="Google"
+                        selected={selectedEngine === "Google"}
+                        onSelect={setSelectedEngine}
+                    />
+                </div>
                 <div className='searchBarAndReverse'>
                     <input type="search" placeholder="Search..." autoFocus id="SearchField" onKeyDown={submitSearch} />
                     <a href='https://yandex.com/images/' id="ReverseImageSearch">
