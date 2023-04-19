@@ -4,30 +4,15 @@ import SearchEngineSelector from './components/SearchEngineSelector'
 import Links from './components/LinksWrapper'
 import lain from './assets/lain.gif'
 
-import Powershell from './components/Powershell'
-
-
 import yandexLogo from './assets/yandex.svg'
 import googleLogo from './assets/google.svg'
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const yandexUrl = "https://yandex.com/search/?text=";
 const googleUrl = "https://www.google.com/search?q=";
 
 function App() {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/powershell" element={<Powershell />} />
-            </Routes>
-        </Router>
-    );
-}
-
-function HomePage() {
     const [selectedEngine, setSelectedEngine] = useState("Yandex");
+
 
     const submitSearch = (event: React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === "Enter") {
@@ -72,7 +57,7 @@ function HomePage() {
             </div>
             <Links />
             <img className='lain' src={lain} />
-        </div >
+        </div>
     );
 }
 
