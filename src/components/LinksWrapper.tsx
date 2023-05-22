@@ -6,7 +6,8 @@ import openaiLogo from '../assets/linksLogos/openai.svg'
 import tutanotaLogo from '../assets/linksLogos/tutanota.svg'
 import twitterLogo from '../assets/linksLogos/twitter.svg'
 import youtubeLogo from '../assets/linksLogos/youtube.svg'
-import dndLogo from '../assets/linksLogos/dnd.svg'
+import phindLogo from '../assets/linksLogos/phind.svg'
+import archLogo from '../assets/linksLogos/arch.svg'
 import chessLogo from '../assets/linksLogos/chess.svg'
 import xahLogo from '../assets/linksLogos/sum.svg'
 import whatsappLogo from '../assets/linksLogos/whatsapp.svg'
@@ -42,10 +43,6 @@ function Links() {
             name="Tutanota"
             url="https://mail.tutanota.com/mail/" />
         <LinkButton
-            logo={dndLogo}
-            name="D&D"
-            url="https://www.dndbeyond.com/" />
-        <LinkButton
             logo={xahLogo}
             name="Xah Lee"
             url="http://xahlee.info/" />
@@ -53,6 +50,14 @@ function Links() {
             logo={chessLogo}
             name="Chess"
             url="https://www.chess.com/home" />
+        <LinkButton
+            logo={phindLogo}
+            name="Phind"
+            url="https://www.phind.com/" />
+        <LinkButton
+            logo={archLogo}
+            name="Arch Wiki"
+            url="https://wiki.archlinux.org/" />
     </div >)
 }
 
