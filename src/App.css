@@ -123,8 +123,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 7em;
-    height: 5em;
-    padding: 1em;
+    height: 2em;
+    padding: 1em 0em 2em 0em;
     vertical-align: middle;
     flex: 0 0 30%;
     border: none;
@@ -143,11 +143,10 @@ body {
 }
 
 .linkName {
-    font-size: 1.25em;
+    font-size: 1em;
     display: block;
     width: 100%;
     font-family: Hack, monospace;
-    margin-bottom: 2em;
 }
 
 .lain {

@@ -1,12 +1,8 @@
 function LinkButton(props: { logo: string, name: string, url: string }) {
-    function redirect() {
-            window.location.href = props.url;
-        }
-
     return (
-        <button
-            className={`linkButton`}
-            onClick={redirect}
+        <a
+            className={`button linkButton`}
+            href={props.url}
         >
             <img
                 src={props.logo}
@@ -14,7 +10,7 @@ function LinkButton(props: { logo: string, name: string, url: string }) {
                 className="linkLogo"
             />
             <span className="linkName">{props.name}</span>
-        </button>
+        </a>
     )
 
 }
